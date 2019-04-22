@@ -67,6 +67,16 @@
     <jar jarfile="${dist}/lib/${ant.project.name}-${DSTAMP}.jar" basedir="${build}"/>
   </target>
 
+  <target name="run" depends="compile">
+    <java classname="ed.estructuras.lineales.Proyecto2" fork="true">
+      <arg value="-h"/>
+      <classpath>
+        <pathelement location="${dist}/lib/${ant.project.name}-${DSTAMP}.jar"/>
+        <pathelement path="${java.class.path}"/>
+      </classpath>
+    </java>
+  </target>
+
   <target name="clean"
         description="clean up" >
     <!-- Delete the ${build} and ${dist} directory trees -->
