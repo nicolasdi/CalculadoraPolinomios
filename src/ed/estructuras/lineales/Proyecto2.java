@@ -151,7 +151,7 @@ public class Proyecto2 {
 	    System.out.println();
 
 	    //////////////////////////////////////////
-	    //( x + y ) * (x + y)  + (x + y) * (x - y) = (x² + 2xy + y²) + (x² - y²) = 2x² - 2xy
+	    //( x + y ) * (x + y)  + (x + y) * (x - y) = (x² + 2xy + y²) + (x² - y²) = 2x² + 2xy
 
 	    System.out.println("(" + a +")"
 	                       +" * "

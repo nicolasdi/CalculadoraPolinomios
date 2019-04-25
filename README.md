@@ -1,16 +1,27 @@
-## Proyecto 02
+##### Proyecto 02
+#### Estructuras de Datos
+##### Calculadora de Polinomios
+#### Alumna: Diana Laura Nicolás Pavía
+==============================================
 
-Detalles sobre la implementación
+Proyecto sobre la materia estructuras de Datos para el semestre 2019-2
 
-* _Clase Monomio_ *
-Su constructor recibe: coeficiente, String, String
-Suposiciones por ahora: no van a entrar cadenas de tipo xxx 
+Detalles sobre la implementación.
 
-* _ Clase Polinomio_ *
-Un Polinomio es una lista doblemente ligada que en sus nodos almacena monomios.
+* _Clase Termino_ * (x²)
+Un término está conformado por una variable y un grado.
 
-- Constructor: arreglo  de coeficientes, arreglo  de variables, arreglo de exponentes
-Para el polinomio de la forma 4x^2y^4 + x
+* _Clase Monomio_ * 2x²y³z⁴
+Un monomio está conformado por un coeficiente y una lista doblemente
+ligada de términos.
+
+* _ Clase Polinomio_ * 2x²y⁴ + 3w³z¹
+Un Polinomio es una lista doblemente ligada de monomios.
+_Constructor de un Polinomio_
+Recibe como parámetros un arreglo de coeficientes, un arreglo de
+variables y un arreglo de exponentes
+*Ejemplo*.
+Para el polinomio de la forma 4x²y⁴ + x¹
 los parámetros deben ser de la forma
 coeficientes [4,1]
 variables["xy", "x"]

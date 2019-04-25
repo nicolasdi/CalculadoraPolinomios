@@ -71,6 +71,32 @@ public class Polinomio {
         return new Polinomio(this.copiaMonomios());
     }
 
+	@Override
+	public boolean equals(Object o) {
+		if(o == this) {
+			return true;
+		}
+
+        if(o == null || o.getClass()!= this.getClass()) {
+            return false;
+        }
+
+        Polinomio representacion = (Polinomio)o;
+
+        //Si tienen cantidad diferente de monomios
+        if(this.getMisMonomios().size() != representacion.getMisMonomios().size()) {
+	        return false;
+        }
+
+        for(Monomio m : this.getMisMonomios()) {
+	        if(!representacion.getMisMonomios().contains(m)) {
+		        return false;
+	        }
+        }
+
+        return true;
+	}
+
     /*
      * Devuelve una lista con una copia de los monomios del polinomio
      * que manda a llamar al método.
@@ -137,7 +163,6 @@ public class Polinomio {
      * Simplifica este polinomi; agrupando términos semejantes y
      * eliminando monomios cero.
      */
-    //Terminar
     public void simplifica() {
         this.eliminaMonomiosCero();
     }
@@ -224,7 +249,6 @@ public class Polinomio {
             }
         }
 
-        //AGREGAR MÉTODO SIMPLIFICA
         resultado.eliminaMonomiosCero();
         return resultado;
     }
